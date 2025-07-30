@@ -53,3 +53,19 @@ const starPatternWithNum = (n) => {
         console.log(row);
     }
 }
+
+---------
+1
+22
+333
+4444
+55555
+const starPatternWithNum = (n) => {
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< i + 1; j++){
+            row = row.concat(" " + (i+1));
+        }
+        console.log(row);
+    }
+}
