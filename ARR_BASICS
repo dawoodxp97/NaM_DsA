@@ -11,10 +11,27 @@ const firstLargestElem = (arr) => {
 }
 
 // STAR Pattern with n.
-const starPattern = (n){
+****
+****
+****
+const starPattern = (n) =>{
     for(let i = 0; i<n; i++){
         let row = " ";
         for(let j = 0; j< n; j++){
+            row = row.concat(" *");
+        }
+        console.log(row);
+    }
+}
+------
+*
+**
+***
+****
+const starPattern2 = (n) =>{
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< i + 1; j++){
             row = row.concat(" *");
         }
         console.log(row);
