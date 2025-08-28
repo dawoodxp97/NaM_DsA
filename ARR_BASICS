@@ -9,3 +9,111 @@ const firstLargestElem = (arr) => {
     }
     return largest;
 }
+
+// STAR Pattern with n.
+****
+****
+****
+const starPattern = (n) =>{
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< n; j++){
+            row = row.concat(" *");
+        }
+        console.log(row);
+    }
+}
+------
+*
+**
+***
+****
+const starPattern2 = (n) =>{
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< i + 1; j++){
+            row = row.concat(" *");
+        }
+        console.log(row);
+    }
+}
+
+-------
+1
+12
+123
+1234
+12345
+const starPatternWithNum = (n) => {
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< i + 1; j++){
+            row = row.concat(" " + (j+1));
+        }
+        console.log(row);
+    }
+}
+
+---------
+1
+22
+333
+4444
+55555
+const starPatternWithNum = (n) => {
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< i + 1; j++){
+            row = row.concat(" " + (i+1));
+        }
+        console.log(row);
+    }
+}
+----------
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+const starPatternWithNum = (n) => {
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< n - i; j++){
+            row = row.concat(" " + (j + 1));
+        }
+        console.log(row);
+    }
+}
+
+------
+     *
+    **
+   ***
+  ****
+ *****
+const starPattern = (n) => {
+    for(let i = 0; i<n; i++){
+        let row = " ";
+        for(let j = 0; j< n - (i + 1); j++){
+            row = row.concat(" ");
+        }
+        for (let k = 0; k < i + 1; k++) { 
+            row = row.concat("*")
+        }
+        console.log(row);
+    }
+}
+-----------
+// Count Digit in number
+
+const countDigitInNum = (n) => {
+    if(n === 0) return 1;
+    n = Math.abs(n);
+    let count = 0;
+    while (n > 0) {
+        n = Math.floor(n/10);
+        count++;
+    }
+    return count;
+}
+
