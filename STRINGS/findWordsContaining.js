@@ -46,3 +46,13 @@ var findWordsContaining = function(words, x) {
     }
     return indices;
 };
+
+/*
+Bruteforce: T&S
+
+m =  no of words
+n = length of each word
+
+Time: O(m*n)
+Space: O(1)
+*/
