@@ -51,3 +51,33 @@ var lengthOfLastWord = function (s) {
     s = s.split(" ");
     return s[s.length - 1].length
 };
+
+// Optimised solution
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function (s) {
+    // Remove spaces i.e Trim
+    let n = s.length - 1;
+    while(n>=0) {
+        if(s[n] === " "){
+            --n;
+        }else{
+            break;
+        }
+    }
+
+    // Count the char till you reach the space.
+    let count = 0;
+    while(n>=0){
+        if(s[n] === " "){
+            break;
+        }else{
+            --n;
+            count++;
+        }
+    }
+    return count;
+};
