@@ -40,6 +40,15 @@ var lengthOfLastWord = function (s) {
 
     return res;
 };
+/*
+Brute Force: T&S
+trim internally loops so o(n), and split also o(n), so Time would be o(2n) ~ o(n).
+Split internally creates a array so space would be o(n)
+
+Time: O(n)
+Space: O(n)
+*/
+
 
 // Optimal shortform
 /**
@@ -81,3 +90,46 @@ var lengthOfLastWord = function (s) {
     }
     return count;
 };
+
+/*
+Optimised solution: T&S
+
+To remove spaces we're looping so o(n), and to count the char we're also looping so o(n), so Time would be o(2n) ~ o(n).
+we've created one variable "n", "count" so it's constant space would be o(1)
+
+Time: O(n)
+Space: O(1)
+*/
+
+
+// Optimised solution 2 (Do it in Single Loop)
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function (s) {
+    let n = s.length - 1;
+    let count = 0;
+    while(n>=0){
+        if(s[n] === " "){
+            --n;
+            if(count > 0){
+                break;
+            }
+        }else{
+            --n;
+            count++;
+        }
+    }
+    return count;
+};
+
+/*
+Optimised solution 2: T&S
+
+To remove spaces we're looping so o(n), and to count the char we're also looping so o(n), so Time would be o(2n) ~ o(n).
+we've created one variable "n", "count" so it's constant space would be o(1)
+
+Time: O(n)
+Space: O(1)
+*/
